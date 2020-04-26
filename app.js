@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var ageRouter = require('./routes/age');
 var app = express();
 
 // view engine setup
@@ -24,6 +24,18 @@ app.use(bodyParser.json());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.post('/health-self-report', function(req, res) {
+  const zipcode = req.body.Zipcode
+  const age = req.body.Age
+  const gender = req.body.Gender
+  const confirmed = req.body.Confirmed
+  const temperature = req.body.Temperature
+  const vomiting = req.body.Vomiting
+  const coughing = req.body.Coughing
+  var FileIdContent={ Zipcode: zipcode, Age: age, Gender: gender, Confirmed: confirmed, Temperature: temperature, Vomiting: vomiting, Coughing: coughing };
+  res.json(FileIdContent);
+  res.end()
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
