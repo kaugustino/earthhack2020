@@ -5,10 +5,31 @@ block content
     p This is your balance: #{balance}
     form(method="post")
         div.input
-            span.label Title
-            input(type="text", name="title")
+            span.label Age
+            input(type="text", name="age")
         div.input
-            span.label Description
-            textarea(name="description", cols="40", rows="5")
+            span.label Gender
+            input(type="text", name="gender")
+        div.input
+            span.label City
+            input(type="text", name="city")
+        div.input
+            span.label State
+            input(type="text", name="state")
+        div.input
+            span.label Temperature
+            input(type="text", name="temperature")
+        div.input
+            span.label Dry cough
+            input(type="checkbox", name="dryCough")
+        div.input
+            span.label Shortness of breath
+            input(type="checkbox", name="breath")
+        div.input
+            span.label Confirmed
+            input(type="checkbox", name="confirmed")
+        div.input
+            span.label Quarantined
+            input(type="checkbox", name="quarantined")
         div.actions
             input(type="submit", value="add")
