@@ -1,35 +1,51 @@
 extends layout
 
 block content
-    h1 Welcome to #{title}
-    p This is your balance: #{balance}
-    form(method="post")
+    div(class="title")
+        img(src="images/CryptoCareFull.png" height="90" width="500")
+        p Patient-Generated Public Distributed Ledger On Infectious Disease Symptoms for COVID-19
+    form(class="report",method="post")
         div.input
-            span.label Age
-            input(type="text", name="age")
+            span.label Zipcode
+            input(name="Zipcode", maxlength="5",minlength="5",pattern="^[0-9]*$" required)
+        p
+        div.input
+            span.label Age (Years)
+            input(type="number", name="Age",min="0" max="150" required)
+        p
         div.input
             span.label Gender
-            input(type="text", name="gender")
+            select(id="gender",type="checkbox", name="Gender" required)
+                option="male"
+                option="female"
+        p
         div.input
-            span.label City
-            input(type="text", name="city")
+            span.label Temperature (Celsius)
+            input(type="number", name="Temperature",min="0" max="120" required)
+        p Symptoms
+        input(type='checkbox', name='vomiting')
+        span Vomiting
+        p
+        input(type="checkbox", name="coughing",id="coughing")
+        span Coughing
+        p
+        input(type="checkbox", name="shortnessOfBreath",id="breathing")
+        span Shortness of breath
+        p
         div.input
-            span.label State
-            input(type="text", name="state")
+            span.label Recently Traveled
+            select(id="travel",type="checkbox", name="travel" required)
+                option="Haven't traveled recently"
+                option="Within the last year"
+                option="Within the last month"
+                option="Within the last week"
+        p
         div.input
-            span.label Temperature
-            input(type="text", name="temperature")
-        div.input
-            span.label Dry cough
-            input(type="checkbox", name="dryCough")
-        div.input
-            span.label Shortness of breath
-            input(type="checkbox", name="breath")
-        div.input
+            input(type="checkbox", name="Confirmed",id="confirmed")
             span.label Confirmed
-            input(type="checkbox", name="confirmed")
         div.input
+            input(type="checkbox", name="Quarantined",id="quarantined")
             span.label Quarantined
-            input(type="checkbox", name="quarantined")
+        p
         div.actions
-            input(type="submit", value="add")
+            input(type="submit", value="Submit")

@@ -1,8 +1,146 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px monospace;
+  background-image: url(../images/nodes.jpg);
 }
-
+#Welcome {
+  text-align: center;
+}
+#confirmed {
+  border-color: white;
+  padding: 0px;
+}
 a {
   color: #00B7FF;
+}
+.title {
+        max-width:400px;
+        margin:50px auto;
+        background:#fff;
+        background-color: lightblue;
+        border-radius:20px;;
+        padding:20px;
+        font-family: monospace, "Times New Roman", Times, serif;
+}
+.title h1 {
+        font-family: monospace;
+        border-width: 2px;
+        text-align: center;
+        letter-spacing: 7px;
+        border-color: black;
+        border-style: solid;
+}
+.form {
+        max-width:400px;
+        margin:50px auto;
+        background:#fff;
+        background-color: lightblue;
+        border-radius:20px;
+        padding:20px;
+        font-family: monospace, "Times New Roman", Times, serif;
+}
+.report {
+        background-color: yellow;
+        max-width:400px;
+        margin:50px auto;
+        background:#fff;
+        border-width: 2px;
+        border-color: black;
+        border-style:solid;
+        border-radius:2px;
+        padding:20px;
+        font-family: monospace, "Times New Roman", Times, serif;
+}
+.report ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+}
+.report li{
+        display: block;
+        padding: 9px;
+        border:1px solid #DDDDDD;
+        margin-bottom: 30px;
+        border-radius: 3px;
+}
+.report li:last-child{
+        border:none;
+        margin-bottom: 0px;
+        text-align: center;
+}
+.report li > label{
+        display: block;
+        float: left;
+        margin-top: -19px;
+        background: #FFFFFF;
+        height: 14px;
+        padding: 2px 5px 2px 5px;
+        color: #B9B9B9;
+        font-size: 14px;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+}
+.report input[type="text"],
+.report input[type="date"],
+.report input[type="datetime"],
+.report input[type="email"],
+.report input[type="number"],
+.report input[type="search"],
+.report input[type="time"],
+.report input[type="url"],
+.report input[type="password"],
+.report textarea,
+.report select
+{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        display: block;
+        outline: none;
+        border: none;
+        height: 25px;
+        line-height: 25px;
+        font-size: 16px;
+        padding: 0;
+        font-family: monospace, "Times New Roman", Times, serif;
+}
+.report input[type="text"]:focus,
+.report input[type="date"]:focus,
+.report input[type="datetime"]:focus,
+.report input[type="email"]:focus,
+.report input[type="number"]:focus,
+.report input[type="search"]:focus,
+.report input[type="time"]:focus,
+.report input[type="url"]:focus,
+.report input[type="password"]:focus,
+.report textarea:focus,
+.report select:focus
+{
+}
+.report li > span{
+    background: #F3F3F3;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: black;
+    font-family: monospace, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.report textarea{
+    resize:none;
+}
+.report input[type="submit"],
+.report input[type="button"]{
+    background: black;
+    border: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+}
+.report input[type="submit"]:hover,
+.report input[type="button"]:hover{
+    background: #6B9FFF;
+    color:#fff;
 }

@@ -53,7 +53,7 @@ var getBalance = async function (req, res, next) {
 
 /* GET home page. */
 router.get('/', getBalance, function(req, res, next) {
-    res.render('index', { title: 'Express', balance: res.locals.balance });
+    res.render('index', { title: 'CryptoCare', balance: res.locals.balance });
 });
 
 router.post('/', writeFileTransaction, getFileContent, function(req, res) {
