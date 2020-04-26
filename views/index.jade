@@ -1,5 +1,26 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="title")
+    h1(id="CryptoCare")= title
+    p(id="Welcome")
+      Distributed Ledger Public Database for Infectious Disease Symptoms 
+  div(class="form")
+    form(action="/health-self-report", class="report",method="post")
+      ul
+        li.input
+          span.label Zip Code
+          input(type="password", name="Zipcode", maxlength="5",minlength="5",pattern="^[0-9]*$" required)
+        li.input
+          span.label Age (Years)
+          input(type="number", name="Age",min="0" max="150" required)
+        li.input
+          span.label Gender
+          select(id="male",type="checkbox", name="Male" required)
+            option="male"
+            option="female"
+        li.input
+          span.label Temperature (Celsius)
+          input(type="number", name="Temperature",min="0" max="100" required)
+        li.actions
+          input(type="submit", value="Submit")
