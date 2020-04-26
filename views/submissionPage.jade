@@ -1,9 +1,10 @@
 extends layout
 
 block content
-    H1 Submitted
-    H2 Status: #{status}
-    H2 File ID: #{fileId}
-    H2 Message:
-    each val, key in transaction
-        p #{key}: #{val}
+    div(style="background-color:white")
+        H1 Submitted
+        H2 Status: #{status}
+        H2 File ID: #{fileId}
+        H2 Message:
+        each val, key in transaction
+            p #{key}: #{val}
