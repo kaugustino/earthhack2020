@@ -3,7 +3,13 @@ body {
   font: 18px monospace; 
   background-image: url(../nodes.jpg);
 }
-
+#Welcome {
+  text-align: center;
+}
+#confirmed {
+  border-color: white;
+  padding: 0px;
+}
 a {
   color: #00B7FF;
 }

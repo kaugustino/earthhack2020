@@ -22,8 +22,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.post('/health-self-report', function(req, res) {
-  const age = req.body.age
-  res.send('hi');	
+  const zipcode = req.body.Zipcode
+  const age = req.body.Age
+  const gender = req.body.Gender
+  const confirmed = req.body.Confirmed
+  const temperature = req.body.Temperature
+  const vomiting = req.body.Vomiting
+  const coughing = req.body.Coughing
+  var FileIdContent={ Zipcode: zipcode, Age: age, Gender: gender, Confirmed: confirmed, Temperature: temperature, Vomiting: vomiting, Coughing: coughing };
+  res.json(FileIdContent);
   res.end()
 });
 

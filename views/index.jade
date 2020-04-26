@@ -4,7 +4,7 @@ block content
   div(class="title")
     h1(id="CryptoCare")= title
     p(id="Welcome")
-      Distributed Ledger Public Database for Infectious Disease Symptoms 
+      Patient-Generated Distributed Public Ledger On Infectious Disease Symptoms
   div(class="form")
     form(action="/health-self-report", class="report",method="post")
       ul
@@ -16,11 +16,26 @@ block content
           input(type="number", name="Age",min="0" max="150" required)
         li.input
           span.label Gender
-          select(id="male",type="checkbox", name="Male" required)
+          select(id="gender",type="checkbox", name="Gender" required)
             option="male"
             option="female"
         li.input
+          span.label Confirmed
+          select(id="confirmed",type="checkbox", name="Confirmed" required)
+            option="COVID-19"
+            option="None"       
+        li.input
           span.label Temperature (Celsius)
           input(type="number", name="Temperature",min="0" max="100" required)
+        li.input
+          span.label Vomiting
+          select(type="checkbox", name="Vomiting",id="vomiting" required)
+            option="Yes"
+            option="No"
+        li.input
+          span.label Coughing
+          select(type="checkbox", name="Coughing",id="coughing" required)
+            option="Yes"
+            option="No"
         li.actions
           input(type="submit", value="Submit")
