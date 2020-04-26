@@ -18,7 +18,7 @@ client.setOperator(operatorAccount, operatorPrivateKey);
 var writeFileTransaction = async function (req, res, next) {
 
     const transactionId = await new FileCreateTransaction()
-        .setContents("Hello, Hedera's file service!")
+        .setContents(req.body)
         .addKey(operatorPublicKey) // Defines the "admin" of this file
         .setMaxTransactionFee(new Hbar(15))
         .execute(client);
@@ -42,5 +42,13 @@ var getBalance = async function (req, res, next) {
 router.get('/', getBalance, function(req, res, next) {
     res.render('index', { title: 'Express', balance: res.locals.balance });
 });
+
+router.post('/', writeFileTransaction, function(req, res) {
+    res.redirect('submission_page');
+});
+
+router.get('/submission_page', function(req, res, next) {
+    res.render('submission_page');
+})
 
 module.exports = router;
